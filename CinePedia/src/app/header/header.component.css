@@ -1,0 +1,19 @@
+#navbar{
+    margin-top: 60px;
+    background-color:black;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    justify-content:space-evenly;
+    text-align:center;
+}
+
+input[type=search]{
+    width:500px;
+}
+#logo{
+    border-radius: 50%;
+}
+.nav-link,.navbar-brand{
+    color: aliceblue;
+}

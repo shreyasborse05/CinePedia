@@ -1,0 +1,52 @@
+/* CSS styles */
+.star-rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    float: left;
+  }
+  
+  .star-rating > input {
+    display: none;
+  }
+  
+  .star-rating > label {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+  }
+/*   
+  .star-rating > label:before {
+    content: "☆";
+    position: absolute;
+    left: 0;
+  } */
+  
+  .star-rating > label:hover,
+  .star-rating > label:hover ~ label,
+  .star-rating > input:checked ~ label {
+    color: gold;
+  }
+  #image_card{
+    justify-self: center;
+    border: none;
+  }
+  .card-body{
+    background-color: #c08525;
+    color: #000;
+  }
+  #form
+  {
+    margin-top: 40px; 
+  }
+  .container{
+    background-color:#c08525 ;
+    color: #000;
+    border-radius: 10px;
+  }
+.container-fluid{
+  background-color: black;
+  color: aliceblue;
+}
+  input.ng-pristine,textarea.ng-pristine{
+    border: 1px solid red;
+  }

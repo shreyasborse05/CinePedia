@@ -1,0 +1,51 @@
+
+<div id="jumbotron"></div>
+<div class="container-fluid p-4">
+    <div class="row" id="form">
+        <div class=" mt-5 ms-5 col-4" id="image_card">
+            <div class="card" style="width: 18rem;">
+                <img src={{movie1.cover}} class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">{{movie1.name}}</p>
+                </div>
+            </div>
+        </div>
+    <div class="container mt-5 col-4">
+    <h2>Rate and Review</h2>
+    <form (ngSubmit)="retrieveData(myForm)" #myForm="ngForm">
+      <!-- Name input -->
+      <div class="form-group mt-5">
+        <label for="nameInput" class="my-1">&nbsp;Name</label>
+        <input type="text" class="form-control my-1" name="name" id="nameInput" placeholder="Enter your name" ngModel required>
+      </div>
+      <label class="my-1">Leave a Rating</label><br>
+<div class="star-rating">
+    <input id="star5" type="radio" name="rating" value="5" ngModel required/>
+    <label for="star5" title="5 stars"><b>☆</b></label>
+  
+    <input id="star4" type="radio" name="rating" value="4" ngModel required/>
+    <label for="star4" title="4 stars"><b>☆</b></label>
+  
+    <input id="star3" type="radio" name="rating" value="3" ngModel required/>
+    <label for="star3" title="3 stars"><b>☆</b></label>
+  
+    <input id="star2" type="radio" name="rating" value="2" ngModel required/>
+    <label for="star2" title="2 stars"><b>☆</b></label>
+  
+    <input id="star1" type="radio" name="rating" value="1" ngModel required/>
+    <label for="star1" title="1 star"><b>☆</b></label>
+  </div><br>
+  
+      
+      
+      <!-- Suggestions Textarea -->
+      <div class="form-group">
+        <label class="my-1" for="suggestionsTextarea">What did you think of the movie</label>
+        <textarea class="form-control my-1" id="suggestionsTextarea" name="suggestionsTextarea" rows="3" ngModel required></textarea>
+      </div>
+      
+      <!-- Submit button -->
+      <button type="submit" value="Submit" class="btn btn-dark my-1" [disabled]="!myForm.valid">Submit</button>
+    </form>
+  </div></div></div>
+  

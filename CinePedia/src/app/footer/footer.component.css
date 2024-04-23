@@ -1,0 +1,12 @@
+#part2{
+    text-align: right;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+footer{
+    z-index: -1;
+    position:relative;
+    color:white;
+}

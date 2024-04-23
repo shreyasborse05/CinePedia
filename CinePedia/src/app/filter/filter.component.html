@@ -1,0 +1,64 @@
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        GENRES
+        </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"><button type="button" (click)="filterGenre('Suspense')">Suspense</button></div>
+        <div class="accordion-body"><button type="button" (click)="filterGenre('Horror')">Horror</button></div>
+        <div class="accordion-body"><button type="button" (click)="filterGenre('Thriller')">Thriller</button></div>
+        <div class="accordion-body"><button type="button" (click)="filterGenre('Sci-fi')">Sci-fi</button></div>
+        <div class="accordion-body"><button type="button" (click)="filterGenre('Drama')">Drama</button></div>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        STARCAST
+        </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"><button type="button" (click)="filterStar('Singlestar')">Singlestar</button></div>
+        <div class="accordion-body"><button type="button" (click)="filterStar('Multistar')">Multi Star</button></div>
+    </div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        FILMMAKERS
+        </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"><button type="button" (click)="filterMaker('Oscarwinning')">Oscar winning</button></div>
+        <div class="accordion-body"><button type="button" (click)="filterMaker('Non-Oscarwinning')">Non-Oscar winning</button></div>
+        
+    </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            RATINGS
+            </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><button type="button" (click)="filterRating(5)">5</button></div>
+            <div class="accordion-body"><button type="button" (click)="filterRating(4)">above 4</button></div>
+            <div class="accordion-body"><button type="button" (click)="filterRating(3)">above 3</button></div>
+            <div class="accordion-body"><button type="button" (click)="filterRating(2)">above 2</button></div>
+            <div class="accordion-body"><button type="button" (click)="filterRating(1)">above 1</button></div>
+        </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive" value="Recent Movies" >
+                RECENT MOVIES
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><button type="button" (click)="filterYear(2023)">2023</button></div>
+                <div class="accordion-body"><button type="button" (click)="filterYear(2022)">2022</button></div>
+            </div>
+            </div>
+</div>

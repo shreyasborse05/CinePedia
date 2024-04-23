@@ -1,0 +1,19 @@
+form input{
+  position: fixed;
+  width: 500px;
+  z-index: 2;
+}
+#homePage{
+    background-color: black;
+    margin-top:5% ;
+}
+
+  .card {
+    width:80%;
+    margin: auto;
+    margin-top:30px ;
+    background-color: #c08525;
+  }
+  #card-image{
+    border-radius:5px;
+  }

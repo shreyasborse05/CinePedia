@@ -1,0 +1,112 @@
+<div class="hidden"></div>
+<div class="info">
+    <h5>{{movie1.name}}</h5>
+    <p>{{movie1.Recent_Movies}} <span>| {{movie1.genre}}</span></p>
+   
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  View Trailer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered rounded">
+    <div class="modal-content">
+          <!-- <iframe controls="false" autoplay="false" src={{movie1.video}} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <iframe autoplay width="580" height="315" [src]="getSafeUrl(movie1.video)" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <!-- <div id="videocontainer"></div> -->
+        </div>
+      
+  </div>
+</div>
+
+<button class="ms-5 btn btn-dark" [routerLink]="['/form',movie1.id]">Leave a Rating</button>
+</div>
+
+<hr>
+<div class="container-fluid p-4" id="info-div">
+    <div class="row">
+        <div class="card mb-3 segment col-7" id="card">
+            <div>
+            <div class="row g-0">
+              <div class="col-md-4 p-3">
+                <img src={{movie1.cover}} class=" rounded" alt="..." height="220">
+              </div>
+              <div class="col-md-8">
+                <div class="row">
+                    <div class="col-6 mt-3">
+                        <div class="row">
+                            <img class="col-4" src="../../assets/favicon.png" height="50" width="50">
+                            <div class="col-8">&nbsp;Website Ratings<p>{{rate}}</p></div>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <div class="row">
+                            <img class="col-3" src="../../assets/popcorn2.png" height="50" width="30">
+                            <div class="col-9">&nbsp;Customers Ratings<p>{{rate}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{movie1.name}}</h5>
+                  <p class="card-text">{{info}}</p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+          <div class="col-4" id="watch">
+            <h3>Where to watch</h3>
+            <img src="../../assets/logos/amazon-prime-logo.png" alt="Name of app" height="100" width="140">
+            <p></p>
+          </div>
+    </div>
+    <div class="row col-12 justify-content-evenly">
+      <div class="col-3">
+        <button [routerLink]="['/About',movie1.id]" fragment="description" class="btn btn-dark">Description</button>
+      </div>
+        <div class="col-3">
+          <button [routerLink]="['/About',movie1.id]" fragment="castdiv" class="btn btn-dark">Cast and Crew</button>
+        </div>
+        <div class="col-3">
+            <button [routerLink]="['/About',movie1.id]" fragment="review" class="btn btn-dark">Viewer Reviews</button>
+        </div>
+      </div>
+</div>
+<!-- ============================ -->
+<div id="description">
+  <div class="headername"><h3>Description</h3></div>
+
+  <div style="width: 99%;" class="cardGroup">
+    <p>{{movie1.description}}</p>
+  </div>
+</div>
+
+<div id="castdiv">
+<div class="headername"><h3>Cast and Crew</h3></div>
+<div class="row justify-content-evenly cardGroup">
+  <div class="card" style="width: 12rem;"*ngFor="let r of movie1.actors">
+    <img src={{r.pic}} class="card-img-top" alt="..." height="200">
+    <div class="card-body">
+      <h5 class="card-title">{{r.name}}</h5>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="review">
+<div class="headername"><h3>Viewer Reviews</h3></div>
+<div class="row justify-content-evenly cardGroup">
+  <div class="card" style="width: 18rem;"*ngFor="let r of movie1.reviews">
+    <div class="card-body">
+      <h5 class="card-title">{{r.author}}</h5>
+      <p>Ratings : {{r.rating}}</p>
+      <p>{{r.review}}</p>
+    </div>
+  </div>
+</div></div>
+<router-outlet></router-outlet>

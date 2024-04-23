@@ -1,0 +1,39 @@
+<div class="container-fluid" id="homePage">
+  <div class="pt-2 ps-5 ms-5" id="search">
+    <form class="ms-5" role="search">
+      <input class="form-control ms-5 me-2" type="text" placeholder="Search" aria-label="Search" (input)="searchText($event)">
+    </form>
+  </div>  
+   <div class="row">
+  <div class="col-9 mt-4">
+   
+    <div class="row">
+        <div *ngFor="let movie of filterArray">
+        <div class="card mb-3 col-5" *ngIf="inputText=='' || movie.genre.toLowerCase().includes(inputText) || movie.name.toLowerCase().includes(inputText)">
+        <div class="row g-0" >
+          <div class="col-md-4 p-3" id="card-image">
+            <img src="{{movie.cover}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{movie.name}}</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text">{{movie.rating}}</p>
+              <a [routerLink]="['/About',movie.id]" class="btn btn-dark">Show Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="col-3 float-end top-10 end-0" id="col-3">
+    <app-filter (genre)="filterg($event)" (Starcast)="filterStar($event)" (Filmmakers)="Filmmakers($event)" (Rating)="filterRating($event)" (Year)="filterYear($event)"></app-filter>
+</div>
+    
+</div>
+</div>
+
+
+
+<app-footer></app-footer>

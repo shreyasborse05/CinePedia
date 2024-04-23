@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div id="navbar" class="container-fluid ">
+      <div class="First"><a class="navbar-brand" [routerLink]="['']">
+        <img id="logo" src="../../assets/images/logo.png" alt="CINEPEDIA" width="80" height="70">&nbsp;&nbsp;
+        <span>CINEPEDIA</span>
+      </a>
+    </div>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" onkeyup="" type="text" placeholder="Search" aria-label="Search" (input)="onSearchTextChanged()">
+        </form>
+      </div> -->
+      <!-- <ng-content></ng-content> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['']" aria-current="page" href="#">Home</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
